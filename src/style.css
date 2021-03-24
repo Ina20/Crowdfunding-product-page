@@ -1,0 +1,128 @@
+body {
+  background: hsla(0, 100%, 0%, 0.03);
+  margin: 0;
+  font-family: 'Commissioner', sans-serif;
+  font-size: 16px;
+}
+.navbar {
+  background-image: url('./images/image-hero-mobile.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.logo {
+  margin: 40px 0 0 30px;
+}
+.menu {
+  margin: 45px 30px 0 0;
+}
+.main {
+  //background: lightblue;
+  margin: 0 30px;
+  position: relative;
+  bottom: 70px;
+}
+.box {
+  background: #fff;
+  border: 1px solid hsla(0, 0%, 0%, 0.1);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.intro {
+  padding: 40px 20px 0 20px;
+  text-align: center;
+}
+.logo-m {
+  position: absolute;
+  top: -25px;
+  left: 42%;
+}
+h2 {
+  padding: 0 50px;
+  font-size: 22px;
+}
+.intro p, .about p {
+  margin: 0;
+  color: hsl(0, 0%, 48%);
+  line-height: 1.8rem;
+}
+.intro .wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 25px 0 40px 0;
+}
+.intro button {
+  height: 56px;
+  width: 80%;
+  margin-right: 10px;
+  border-radius: 60px;
+  border: none;
+  background: hsl(176, 50%, 47%);
+  color: #fff;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.intro button:hover {
+  cursor: pointer;
+  background: hsl(176, 72%, 28%);
+}
+.statistics {
+  margin-top: 30px;
+  align-items: center;
+  text-align: center;
+}
+.statistics h2 {
+  font-size: 32px;
+  margin: 10px 0;
+}
+.statistics p {
+  margin: 0;
+  color: hsl(0, 0%, 48%);
+  font-size: 14px;
+}
+.stats {
+  padding: 20px 0;
+  width: 60%;
+}
+.stats:not(:last-of-type):after {
+  content: "";
+  position: absolute;
+  padding: 12px 0;
+  left: 38%;
+  width: 24%;
+  border-bottom: 1px solid hsla(0, 0%, 0%, 0.2);
+}
+.about {
+  margin-top: 30px;
+  padding: 20px 25px;
+  text-align: left;
+}
+.about h2 {
+  padding: 0;
+}
+.about p{
+  margin-bottom: 30px;
+}
+.pledge {
+  margin: 10px 0;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  border-radius: 10px;
+  padding: 0 25px;
+}
+h4 {
+  margin-bottom: 4px;
+}
+.pledge p:first-of-type {
+  font-size: 15px;
+  color: hsl(176, 50%, 47%);
+  font-weight: 500;
+}

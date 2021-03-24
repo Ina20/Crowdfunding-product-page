@@ -19,9 +19,16 @@
   },
   "homepage": "https://github.com/Ina20/Crowdfunding-product-page#readme",
   "dependencies": {
+    "@svgr/parcel-plugin-svgr": "^5.5.0",
     "babel-cli": "^6.26.0",
     "babel-preset-react-app": "^3.1.2",
+    "images": "^3.2.3",
     "react": "^17.0.2",
-    "react-dom": "^17.0.2"
+    "react-dom": "^17.0.2",
+    "src": "^1.1.2"
+  },
+  "devDependencies": {
+    "file-loader": "^6.2.0",
+    "parcel-bundler": "^1.12.5"
   }
 }

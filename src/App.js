@@ -1,13 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import Nav from "./Nav";
+import Main from "./Main";
 
 const App = () => {
   return (
     <div>
-      <h1>Mastercraft Bamboo Monitor Riser</h1>
+      <Nav />
+      <Main />
     </div>
   );
-
 };
 
 ReactDOM.render(<App />, document.getElementById("root"));
