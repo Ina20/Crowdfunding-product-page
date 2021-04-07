@@ -48,7 +48,7 @@ h2 {
   padding: 0 50px;
   font-size: 22px;
 }
-.intro p, .about p {
+.intro p, .about p, .modal-content p {
   margin: 0;
   color: hsl(0, 0%, 48%);
   line-height: 1.8rem;
@@ -71,7 +71,7 @@ h2 {
   font-weight: 700;
   font-size: 16px;
 }
-.intro button:hover {
+.intro button:hover, .pledge button:hover {
   cursor: pointer;
   background: hsl(176, 72%, 28%);
 }
@@ -121,8 +121,162 @@ h2 {
 h4 {
   margin-bottom: 4px;
 }
-.pledge p:first-of-type {
+.pledge-header-wrapper p {
   font-size: 15px;
   color: hsl(176, 50%, 47%);
   font-weight: 500;
+}
+.pledge button {
+  height: 52px;
+  width: 60%;
+  margin-bottom: 25px;
+  border-radius: 60px;
+  border: none;
+  background: hsl(176, 50%, 47%);
+  color: #fff;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  font-size: 15px;
+}
+.pledge h2 {
+  font-size: 32px;
+  display: flex;
+  align-items: center;
+}
+.pledge span {
+  margin-left: 10px;
+  color: hsl(0, 0%, 48%);
+  font-size: 16px;
+  font-weight: 400;
+}
+.pledge.disabled {
+  color: hsla(0, 0%, 0%, 0.6);
+  border: 1px solid hsla(0, 0%, 0%, 0.1);
+}
+.pledge.disabled p, .pledge.disabled span {
+  color: hsla(0, 0%, 0%, 0.3);
+}
+.pledge.disabled .pledge-header-wrapper p {
+  color: hsla(176, 50%, 47%, 0.6);
+}
+button:disabled {
+  background: hsla(0, 0%, 0%, 0.2);
+}
+button:disabled:hover {
+  background: hsla(0, 0%, 0%, 0.2);
+  cursor: auto;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  bottom: 0px;
+  left: 0;
+  right: 0;
+  background: hsla(0, 0%, 0%, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y:scroll;
+  overflow-x:hidden;
+}
+.modal-content {
+  position: absolute;
+  top: 150px;
+  width: 90%;
+  background: #fff;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.modal-content p {
+  margin: 0 20px 20px 20px;
+}
+.modal-header {
+  margin-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.modal-header h2 {
+  margin: 30px 20px;
+  padding: 0;
+}
+.modal .pledge {
+  margin: 0 20px 20px 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.modal .pledge p {
+  margin: 10px 0;
+}
+.pledge-quantity-modal {
+  margin: 0;
+  padding: 10px 0;
+  font-size: 20px;
+}
+.pledge-header {
+  display: flex;
+  align-items: center;
+}
+.pledge-header h4 {
+  margin: 10px 10px;
+}
+.radio-select {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+.container {
+  position: relative;
+  padding-left: 30px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.pledge.disabled .container {
+  cursor: auto;
+}
+.container .pledge-header-wrapper p {
+  margin-left: 9px;
+  margin-top: 0;
+}
+.container .pledge-header-wrapper h4 {
+  margin-bottom: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 7px;
+  left: -10px;
+  height: 25px;
+  width: 25px;
+  background: #fff;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  border-radius: 50%;
+}
+.checkmark-pledge {
+  top: 15px
+}
+.container:hover input:not(:disabled) ~ .checkmark {
+  border: 1px solid hsl(176, 50%, 47%);
+}
+.pledge:not(.disabled) .container:hover h4{
+  color: hsl(176, 50%, 47%);
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.container input:checked ~ .checkmark:after {
+  display: block;
+}
+.container .checkmark:after {
+ 	top: 6px;
+	left: 6px;
+	width: 14px;
+	height: 14px;
+	border-radius: 50%;
+	background: hsl(176, 50%, 47%);
 }

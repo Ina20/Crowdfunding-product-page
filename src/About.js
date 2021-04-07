@@ -10,9 +10,9 @@ const About = () => {
       your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
       <p>Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer
       to allow notepads, pens, and USB sticks to be stored under the stand.</p>
-      <Pledge heading="Bamboo Stand" price="$25" />
-      <Pledge heading="Black Edition Stand" price="$75" />
-      <Pledge heading="Mahogany Special Edition" price="$200" />
+      <Pledge heading="Bamboo Stand" price="$25" id="bamboo" initialQuantity="101" />
+      <Pledge heading="Black Edition Stand" price="$75" id="black" initialQuantity="64" />
+      <Pledge heading="Mahogany Special Edition" price="$200" id="mahogany" initialQuantity="0" />
     </div>
   )
 }
