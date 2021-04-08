@@ -2,6 +2,10 @@ import React, { useState } from 'react';
 
 const Pledge = (props) => {
   const [quantity, setQuantity] = useState(props.initialQuantity);
+  const [price, setPrice] = useState(props.price);
+  const toggleDetails = (e) => {
+    props.show(e.target.value);
+  }
 
   return (
     <div className={'pledge ' + (quantity == 0 ? 'disabled' : '')}>
@@ -18,6 +22,7 @@ const Pledge = (props) => {
                 name="select-pledge"
                 value={props.id}
                 className="radio-select"
+                onChange={toggleDetails}
                 disabled={quantity == 0}
               />
               <span className="checkmark checkmark-pledge"></span>
@@ -53,6 +58,40 @@ const Pledge = (props) => {
             <button disabled={quantity == 0}>{quantity == 0 ? 'Out of Stock' : 'Select Reward'}</button>
           </div>
         )
+      }
+      {
+        props.details == "bamboo" && props.id == "bamboo" ? (
+          <div id={props.id + 'Details'} className="pledge-details">
+            <p>Enter your pledge</p>
+            <div className="pledge-input-wrapper">
+              <input
+                type="text"
+                name="pledge-value"
+                value={price}
+                onChange={e => setPrice(e.target.value)}
+                className="pledge-value-input"
+              />
+              <button>Continue</button>
+            </div>
+          </div>
+        ) : null
+      }
+      {
+        props.details == "black" && props.id == "black" ? (
+          <div id={props.id + 'Details'} className="pledge-details">
+            <p>Enter your pledge</p>
+            <div className="pledge-input-wrapper">
+              <input
+                type="text"
+                name="pledge-value"
+                value={price}
+                onChange={e => setPrice(e.target.value)}
+                className="pledge-value-input"
+              />
+              <button>Continue</button>
+            </div>
+          </div>
+        ) : null
       }
 
     </div>

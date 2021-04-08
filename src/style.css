@@ -280,3 +280,41 @@ button:disabled:hover {
 	border-radius: 50%;
 	background: hsl(176, 50%, 47%);
 }
+.pledge-details {
+  position: relative;
+  margin-top: 20px;
+  //padding: 20px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: hsl(0, 0%, 48%);
+}
+.pledge-details p {
+  padding: 20px 0;
+}
+.pledge-details:before {
+  content: "";
+  position: absolute;
+  padding: 12px 0;
+  bottom: 140px;
+  left: -25px;
+  width: 118%;
+  border-top: 2px solid hsla(0, 0%, 0%, 0.2);
+}
+.pledge-input-wrapper {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.pledge-value-input {
+  height: 50px;
+  width: 35%;
+  margin-right: 20px;
+  padding-left: 20px;
+  border-radius: 60px;
+  border: 1px solid hsla(0, 0%, 0%, 0.2);
+  color: #000;
+  font-family: 'Commissioner', sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}

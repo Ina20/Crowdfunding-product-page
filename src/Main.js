@@ -8,6 +8,7 @@ import Logo from './images/logo-mastercraft';
 
 const Main = () => {
   const [showModal, setShowModal] = useState(false);
+  const [moneyTotal, setMoneyTotal] = useState(89914);
 
   return (
     <div class="main">
@@ -20,9 +21,9 @@ const Main = () => {
           <BookmarkIcon />
         </div>
       </div>
-      <Statistics />
+      <Statistics moneyTotal={moneyTotal} />
       <About />
-      <Modal onClose={() => setShowModal(false)} show={showModal} />
+      <Modal onClose={() => setShowModal(false)} show={showModal} moneyTotal={moneyTotal} setMoneyTotal={setMoneyTotal}/>
     </div>
   )
 }

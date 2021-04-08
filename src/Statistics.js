@@ -1,17 +1,18 @@
 import React from 'react';
 
-const Statistics = () => {
+const Statistics = (props) => {
+
   return (
-    <div class="statistics box">
-      <div class="stats money">
-        <h2>$89,914</h2>
+    <div className="statistics box">
+      <div className="stats money">
+        <h2>{'$' + props.moneyTotal}</h2>
         <p>of $100,000 backed</p>
       </div>
-      <div class="stats backers">
+      <div className="stats backers">
         <h2>5,007</h2>
         <p>total backers</p>
       </div>
-      <div class="stats days">
+      <div className="stats days">
         <h2>56</h2>
         <p>days left</p>
       </div>
